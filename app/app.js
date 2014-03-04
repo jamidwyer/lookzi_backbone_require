@@ -1,0 +1,18 @@
+define([
+    'jquery',
+    'underscore',
+    'backbone',
+], function(require, exports, module) {
+    "use strict";
+
+    var _ = require("underscore");
+    var $ = require("jquery");
+    var Backbone = require("backbone");
+
+    var app = module.exports;
+
+    app.root = "/";
+    var initialize = function(){
+        alert("yay");
+    }
+});

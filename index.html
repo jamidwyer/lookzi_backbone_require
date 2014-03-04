@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title></title>
+
+    <link rel="stylesheet" href="app/css/styles.css">
+</head>
+
+<body>
+    <div class="container main-frame ng-scope" ng-app="Lookzi" ng-controller="mainController" ng-init="init()">
+		<div class="search-box row-fluid form-inline"></div>
+        <div class="results-top"></div>
+        <div class="results-container">
+            <ul class="result-list">
+            </ul>
+        </div>
+        <div class="results-bottom"></div>
+	</div>
+    <script data-main="app/main" src="libraries/require.js"></script>
+</body>
+</html>

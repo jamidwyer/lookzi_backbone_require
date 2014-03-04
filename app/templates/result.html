@@ -1,0 +1,10 @@
+<li>
+<div class="avatar-container></div>
+<div class="item-content-container">
+<% _.each(results, function(result) { %> 
+    <div><a href="<%=result.url%>"><%=result.title%></a></div>
+    <div><img src="http://farm2.static.flickr.com/<%=result.server%>/<%=result.id%>_<%=result.secret%>.jpg"></div>
+<% }); %>
+
+</div>
+</li>
