@@ -1,20 +1,31 @@
-define(['jquery','underscore','backbone',
-	'../models/Result',	'text!../../templates/result.html',
+define(['jquery',
+    'underscore',
+    'backbone',
+	'../models/Result',
+    'text!../../templates/result.html',
+    'text!../../templates/footer.html',
+	'i18n!../models/nls/Lexicon'
 ], 
-function($, _, Backbone, Result, resultHTML) {
+function($, _, Backbone, Result, resultHTML, footerHTML, Lexicon) {
 
 	MainView = function() {
 		Result.on('sync', render);
 		Result.fetch();
         
-		var $el = $('.results-container');
+		var $el = $('.container');
 
 		function render() {
+            $('body').addClass('lang-'+Lexicon.lang);
+			var footerTemplate = _.template(footerHTML, {
+                logo: Lexicon.images.logo,
+                description: Lexicon.description.description
+            });
+			$el.find('.footer').html(footerTemplate);
             var results = Result.get('photos');
-			var template = _.template(resultHTML, {
+			var resultsTemplate = _.template(resultHTML, {
                 results: results.photo
             });
-			$el.html(template);
+			$el.find('.results-container').html(resultsTemplate);
 		}
 	}
 

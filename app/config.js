@@ -3,7 +3,8 @@ require.config({
         "underscore": "../libraries/lodash.underscore",
         "jquery": "../libraries/jquery",
         "backbone": "../libraries/backbone",
-		'text' : '../libraries/text'
+		'text' : '../libraries/text',
+		'i18n' : '../libraries/i18n'
     },
 	shim: {
 		'jquery' : {

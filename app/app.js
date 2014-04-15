@@ -13,6 +13,5 @@ define([
 
     app.root = "/";
     var initialize = function(){
-        alert("yay");
     }
 });
