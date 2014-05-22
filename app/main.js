@@ -1,5 +1,5 @@
 require(["config"], function() {
-	require(['js/views/MainView'], function(MainView) {
-		var view = new MainView();
-	});
+    require(['js/views/MainView'], function(MainView) {
+        var view = new MainView();
+    });
 });
